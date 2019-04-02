@@ -11,8 +11,13 @@ import {View, DatePickerIOS} from 'react-native';
 
 export default class App extends Component {
 
+    state = {
+        chosenDate: new Date()
+    };
+
     _onDateChange = (date) => {
-        console.warn('date = ' + date.toLocaleString());
+        console.warn(666)
+        this.setState({chosenDate: date});
     };
 
     render() {
@@ -20,7 +25,7 @@ export default class App extends Component {
         return (
             <View style={{flex: 1, backgroundColor: 'white'}}>
                 <DatePickerIOS
-                    date={new Date()}
+                    date={this.state.chosenDate}
                     onDateChange={this._onDateChange}
                 />
             </View>

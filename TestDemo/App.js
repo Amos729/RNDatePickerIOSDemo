@@ -16,7 +16,6 @@ export default class App extends Component {
     };
 
     _onDateChange = (date) => {
-        console.warn(666)
         this.setState({chosenDate: date});
     };
 
